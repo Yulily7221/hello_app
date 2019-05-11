@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HelloApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-menus">
+    <li>
+      <%= link_to("ABOUT", "/about") %>
+    </li>
+    <li>
+      <%= link_to("HELP", "/help") %>
+      </li>
+      <li>
+      <%= link_to("TOP", "/") %>
+    </li>
+      <li>
+      <%= link_to("ユーザー一覧", "users/index") %>
+      <li>
+      <%= link_to("ユーザー登録", "/signup") %>
+      </li>
+      <li>
+        <%= link_to("新規投稿", "/posts/new") %>
+      </li>
+      <li>
+      <%= link_to("投稿一覧", "/posts/index") %>
+      </li>
+      </div>
+      </header>
+      <%= yield %>
+  </body>
+</html>
