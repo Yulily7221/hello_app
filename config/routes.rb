@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   get "/" => "pages#top"
   get 'help' => "pages#help"
   get "about" => "pages#about"
+
   get "signup" => "users#signup"
   post "create" => "users#create"
   #get "users/index" => "users#index"
   get 'users/index', to: 'users#index', as: 'index'
-  get "users/:id" => "users#show"
+  get "show/:id" => "users#show"
 
   get 'posts/index' => 'posts#index'
   get 'posts/new' => 'posts#new'

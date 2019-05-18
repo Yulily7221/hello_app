@@ -1,7 +1,5 @@
-<%= form_tag( "/create") do %>
-<p>名前</P>
-  <input name="name" type=  "text" >
-<p>メールアドレス</P>
-   <input name="email" type= "text">
-   <input type="submit" value="登録">
+<%= form_for @user, url: create_path do |f| %>
+<%= f.text_field :name, placeholder: 'name' %>
+<%= f.text_field :email, placeholder: 'email' %>
+<%= f.submit %>
 <% end %>
